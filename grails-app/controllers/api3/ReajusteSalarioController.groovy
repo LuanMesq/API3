@@ -93,7 +93,6 @@ class ReajusteSalarioController {
         headers.setContentType(MediaType.APPLICATION_JSON)
         HttpEntity<String> entity = new HttpEntity<>(requestData, headers)
 
-        // Use HttpMethod.PUT para fazer uma solicitação PUT
         return restTemplate.exchange(apiUrl, HttpMethod.PUT, entity, String.class)
     }
 
